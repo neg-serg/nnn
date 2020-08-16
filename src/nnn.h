@@ -120,7 +120,7 @@ struct key {
 
 static struct key bindings[] = {
 	/* Back */
-	{ KEY_LEFT,       SEL_BACK },
+	{ CONTROL('W'),   SEL_BACK },
 	{ 'h',            SEL_BACK },
 	/* Inside or select */
 	{ KEY_ENTER,      SEL_OPEN },
@@ -166,7 +166,7 @@ static struct key bindings[] = {
 	/* Connect to server over SSHFS */
 	{ 'c',            SEL_REMOTE },
 	/* Cycle contexts in forward direction */
-	{ '\t',           SEL_CYCLE },
+	{ '\t',           SEL_OPEN },
 	/* Cycle contexts in reverse direction */
 	{ KEY_BTAB,       SEL_CYCLER },
 	/* Go to/create context N */
@@ -263,7 +263,7 @@ static struct key bindings[] = {
 	/* Change dir on quit */
 	{ CONTROL('G'),   SEL_QUITCD },
 	/* Quit */
-	{ CONTROL('Q'),   SEL_QUIT },
+	{ CONTROL(' '),   SEL_QUIT },
 	/* Quit with an error code */
 	{ 'Q',            SEL_QUITFAIL },
 #ifndef NOFIFO
